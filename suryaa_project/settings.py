@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'suryaa_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'suryaa_neuro',
-        'USER': 'suryaaneuro@admin',
+        'NAME': 'violetinfotech25$default',
+        'USER': 'violetinfotech25',
         'PASSWORD': 'admin@123',
-        'HOST': '192.168.1.3',
+        'HOST': 'violetinfotech25.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
