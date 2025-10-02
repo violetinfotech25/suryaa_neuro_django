@@ -1,0 +1,698 @@
+{% extends "layouts/main_layout.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<!-- Slider Start -->
+<section class="banner">
+  <div class="container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 col-xl-7">
+              <div class="block">
+                <div class="divider mb-3"></div>
+                <span class="text-uppercase text-sm letter-spacing" style="font-weight: bold; color: darkgreen;">
+                  “The brain is the universe within us—unlocking it is the art of neurology.”
+                </span>
+
+                <h1 class="mb-3 mt-3">“Your companion in neuroscience care”</h1>
+
+                <p class="mb-4 pr-5">
+                  “Neurology is not just about treating the brain, it’s about nurturing the mind and restoring life.
+                  With trust and care, we stand as your partner in every step of neurological wellness.”
+                </p>
+
+                <div class="btn-container ">
+                  <a href="{% url 'suryaa_app:appoinment' %}" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">
+                    Contact Us <i class="icofont-simple-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more .swiper-slide blocks here for additional slides -->
+
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Add Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+<section class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="feature-block d-lg-flex justify-content-center">
+
+          <!-- Expert Doctors -->
+          <div class="feature-item">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <!-- Front Side -->
+                <div class="flip-card-front">
+                  <div class="feature-icon mb-4">
+                    <i class="icofont-surgeon-alt"></i>
+                  </div>
+                  <h5>Expert Doctors</h5>
+                </div>
+                <!-- Back Side -->
+                <div class="flip-card-back">
+                  <span>24 Hours Service</span>
+                  <h4 class="mb-3">Expert Doctors</h4>
+                  <p class="mb-4"><b>
+                    “Our team of expert doctors brings together years of experience 
+                    and advanced medical knowledge to provide the highest 
+                    standard of neurological care.”
+                  </b></p>
+                  <a href="{% url 'suryaa_app:appoinment' %}" class="btn btn-main btn-round-full">
+                    Make an appointment
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="feature-item">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <!-- Front Side -->
+                <div class="flip-card-front">
+                  <div class="feature-icon mb-4">
+                    <i class="icofont-ui-clock"></i>
+                  </div>
+                  <h5>Working Hours</h5>
+                </div>
+                <!-- Back Side -->
+                <div class="flip-card-back">
+                  <span>Timing schedule</span>
+                  <h4 class="mb-3">Working Hours</h4>
+                  <ul class="w-hours list-unstyled text-left">
+                    <li><b>Sunday : </b> Emergency case only</li>
+                    <li><b>Monday : </b> 9:00 - 7:00</li>
+                    <li><b>Tuesday : </b> 9:00 - 7:00</li>
+                    <li><b>Wednesday : </b> 9:00 - 7:00</li>
+                    <li><b>Thursday : </b> 9:00 - 7:00</li>
+                    <li><b>Friday : </b> 9:00 - 7:00</li>
+                    <li><b>Saturday : </b> 9:00 - 7:00</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emergency Cases -->
+          <div class="feature-item">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <!-- Front Side -->
+                <div class="flip-card-front">
+                  <div class="feature-icon mb-4">
+                    <i class="icofont-support"></i>
+                  </div>
+                  <h5>Emergency Cases</h5>
+                </div>
+                <!-- Back Side -->
+                <div class="flip-card-back">
+                  <span>Emergency Cases</span>
+                  <h4 class="mb-3">0422 252 7799</h4>
+                  <p><b>
+                    “In case of any neurological emergency, our dedicated team is 
+                    available to provide immediate and advanced care. 
+                    Your safety and well-being are our top priority, every second counts.”
+                  </b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- feature-block -->
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="divider">🧬</div>
+
+    <div class="services-grid">
+      <div class="service-item">
+        <img src="{% static 'images/service/1.png' %}" alt="Radiology">
+        <p>Radiology (MRI, CT)</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/2.png' %}" alt="Neuro Lab">
+        <p>Neuro Lab</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/3.png' %}" alt="ENMG">
+        <p>ENMG</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/4.png' %}" alt="EEG">
+        <p>EEG</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/5.png' %}" alt="Video EEG">
+        <p>Video EEG</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/6.png' %}" alt="BAER">
+        <p>BAER</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/i7.png' %}" alt="Sleep Study">
+        <p>Sleep Study</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/i8.png' %}" alt="VEP">
+        <p>VEP</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/i9.png' %}" alt="Neuro Rehabilitation">
+        <p>Neuro Rehabilitation</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/i10.png' %}" alt="Physiotherapy">
+        <p>Physiotherapy</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/i11.png' %}" alt="Diagnostic Services">
+        <p>Diagnostic Services</p>
+      </div>
+      <div class="service-item">
+        <img src="{% static 'images/service/i12.png' %}" alt="Available 24/7">
+        <p>Available 24/7</p>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section about">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-4 col-sm-6">
+				<div class="about-img">
+					<img src="{% static 'images/doctors/d-3.png' %}" alt="" class="img-fluid">
+					<img src="{% static 'images/doctors/d-2.png' %}" alt="" class="img-fluid mt-4">
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="about-img mt-4 mt-lg-0">
+					<img src="{% static 'images/doctors/d-1.jpg' %}" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="about-content pl-4 mt-4 mt-lg-0">
+					<h2 class="title-color">Cognitive Care & Healthy Life  <br>& Healthy Life </h2>
+					<p class="mt-4 mb-5">“Our approach to cognitive care ensures the health and proper functioning of your brain. We focus on preventing, diagnosing, and managing neurological conditions with expert guidance. <b></b>By supporting mental wellness, we help you lead a balanced and healthy life.”</b></p>
+					<a href="{% url 'suryaa_app:service' %}" class="btn btn-main-2 btn-round-full btn-icon">Services<i class="icofont-simple-right ml-3"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="cta-section">
+    <div class="container">
+        <div class="cta position-relative" id="counter-section">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter-stat">
+                        <i class="icofont-doctor"></i>
+                        <span class="h3 counter" data-target="58">0</span>K
+                        <p>Happy People</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter-stat">
+                        <i class="icofont-flag"></i>
+                        <span class="h3 counter" data-target="700">0</span>+
+                        <p>Surgery Completed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter-stat">
+                        <i class="icofont-badge"></i>
+                        <span class="h3 counter" data-target="40">0</span>+
+                        <p>Expert Doctors</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="counter-stat">
+                        <i class="icofont-globe"></i>
+                        <span class="h3 counter" data-target="20">0</span>
+                        <p>Worldwide Branch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="testimonial-section">
+    <h2>Testimonials</h2>
+    
+
+    <div class="testimonial-container" id="testimonialContainer">
+      <div class="testimonial-text">
+        <strong>The staff is very supportive and Dr. Ahmed Mohiuddin makes sure to give personal attention to all the patients.</strong>
+        <p>
+          It was a great experience we had at City Neuro hospital. The staff is very supportive 
+          and Dr. Ahmed Mohiuddin makes sure to give precise personal attention to all the patients 
+          in the hospital. The best part is that all the labs are within the hospital itself and the 
+          relatives do not have to run out to get medicines, test reports or anything else leaving 
+          the patient alone.
+        </p>
+      </div>
+
+      <div class="testimonial-text">
+        <strong>Excellent facilities and quick response from staff members.</strong>
+        <p>
+          The hospital is equipped with modern technology and all the tests are done very efficiently. 
+          The doctors provide detailed explanations and the staff is always available to help.
+        </p>
+      </div>
+
+      <div class="testimonial-text">
+        <strong>Truly patient-centric care with kind staff.</strong>
+        <p>
+          I really appreciate the way the hospital staff handles patients with compassion. 
+          Every patient is treated with respect and proper attention, which builds trust and comfort.
+        </p>
+      </div>
+
+      <div class="testimonial-text">
+        <strong>Clean environment and professional doctors.</strong>
+        <p>
+          The hospital maintains cleanliness at all times and the doctors are very professional 
+          in their approach. I never felt neglected and always received timely treatment.
+        </p>
+      </div>
+
+      <div class="testimonial-text">
+        <strong>Highly recommend this hospital for quality healthcare.</strong>
+        <p>
+          From the moment we entered, the process was smooth and hassle-free. 
+          The staff took care of everything, and the doctors ensured we were comfortable. 
+          Truly one of the best healthcare experiences.
+        </p>
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <span class="arrow left" onclick="prevTestimonial()">&#8592;</span>
+    <span class="arrow right" onclick="nextTestimonial()">&#8594;</span>
+
+    <!-- Dots -->
+    <div class="dots" id="dots">
+      <span class="dot active" onclick="goToTestimonial(0)"></span>
+      <span class="dot" onclick="goToTestimonial(1)"></span>
+      <span class="dot" onclick="goToTestimonial(2)"></span>
+      <span class="dot" onclick="goToTestimonial(3)"></span>
+      <span class="dot" onclick="goToTestimonial(4)"></span>
+    </div>
+  </section>
+
+<section class="section service gray-bg">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7 text-center">
+				<div class="section-title">
+					<h2>Award winning patient care</h2>
+					<div class="divider mx-auto my-4"></div>
+					<p>"Award-winning patient care with a focus on neurological health. Expert neurospecialists ensure precise diagnosis and compassionate treatment. Dedicated to restoring brain and nerve function with excellence and empathy."</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-item mb-4">
+					<div class="icon d-flex align-items-center">
+						<i class="icofont-laboratory text-lg"></i>
+						<h4 class="mt-3 mb-3">Laboratory services</h4>
+					</div>
+
+					<div class="content">
+						<p class="mb-4">"Advancing surgery with cutting-edge laboratory research.
+Where science meets precision for better healing."</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-item mb-4">
+					<div class="icon d-flex align-items-center">
+						<i class="icofont-heart-beat-alt text-lg"></i>
+						<h4 class="mt-3 mb-3">Heart Disease</h4>
+					</div>
+					<div class="content">
+						<p class="mb-4">"Fighting heart disease with advanced care and research.
+Healing hearts, saving lives through innovation."</p>
+					</div>
+				</div>
+			</div>
+			
+			
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-item mb-4">
+					<div class="icon d-flex align-items-center">
+						<i class="icofont-crutch text-lg"></i>
+						<h4 class="mt-3 mb-3">Body Surgery</h4>
+					</div>
+
+					<div class="content">
+						<p class="mb-4">"Transforming body surgery with advanced techniques and precision.
+Innovations that restore health, enhance recovery, and save lives."</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-item mb-4">
+					<div class="icon d-flex align-items-center">
+						<i class="icofont-brain-alt text-lg"></i>
+						<h4 class="mt-3 mb-3">Neurology Surgery</h4>
+					</div>
+					<div class="content">
+						<p class="mb-4">"Shaping the future of neurology surgery with precision and care.
+Innovations that heal minds and restore lives."</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-item mb-4">
+					<div class="icon d-flex align-items-center">
+						<i class="icofont-dna-alt-1 text-lg"></i>
+						<h4 class="mt-3 mb-3">Gynecology</h4>
+					</div>
+					<div class="content">
+						<p class="mb-4">"Advancing gynecology with compassionate care and modern innovation.
+Dedicated to women’s health, healing, and well-being."</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section appoinment">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-6 ">
+				<div class="appoinment-content">
+					<img src="{% static 'images/about/img-3.jpg' %}" alt="" class="img-fluid">
+					<div class="emergency">
+						<h2 class="text-lg"><i class="icofont-phone-circle text-lg"></i>0422 252 7799</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-10 ">
+				<div class="appoinment-wrap mt-5 mt-lg-0">
+					<h2 class="mb-2 title-color">Contact Us</h2>
+					<p class="mb-4">Contact with us.</p>
+					     <form method="post" action="{% url 'suryaa_app:appoinment' %}" class="appoinment-form">
+							{% csrf_token %}
+                    <div class="row">
+                         <!-- <div class="col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                  <option>Dr.Shakthi raja Guru</option>
+                                  <option>Dr.Govinthan</option>
+                                  <option>Dr.Meenakshi</option>
+                                  
+                                </select>
+                            </div>
+                        </div> -->
+
+                         <!-- <div class="col-lg-6">
+                            <div class="form-group">
+                                <input name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="col-lg-6">
+                            <div class="form-group">
+                                <input name="time" id="time" type="text" class="form-control" placeholder="Time">
+                            </div>
+                        </div> -->
+                         <div class="col-lg-6">
+                            <div class="form-group">
+                                <input name="name" id="name" type="text" class="form-control" placeholder="Full Name">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input name="phone" id="phone" type="Number" class="form-control" placeholder="Phone Number">
+                            </div>
+                        </div>
+
+						<div class="col-lg-6">
+							<div class="form-group">
+								<input 
+								name="email" 
+								id="email" 
+								type="email" 
+								class="form-control" 
+								placeholder="Email Address" 
+								required 
+								pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+								title="Please enter a valid email address (e.g., user@example.com)">
+							</div>
+						</div>
+
+						<div class="col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control" id="exampleFormControlSelect2">
+                                  <option>Cardio</option>
+                                  <option>Neurology</option>
+                                  <option>Gynacology</option>
+                               
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-2 mb-4">
+                        <textarea name="message" id="message" class="form-control" rows="6" placeholder="Your Message"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-main btn-round-full">Submit <i class="icofont-simple-right ml-2"></i></button>
+                </form>
+            </div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- <section class="section testimonial-2 gray-bg">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7">
+				<div class="section-title text-center">
+					<h2>We served over 5000+ Patients</h2>
+					<div class="divider mx-auto my-4"></div>
+					<p>"We have successfully cared for over 5,000+ neurology patients, delivering expert treatment and compassionate support every step of the way."</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-12 testimonial-wrap-2">
+				<div class="testimonial-block style-2  gray-bg">
+					<i class="icofont-quote-right"></i>
+
+					<div class="testimonial-thumb">
+						<img src="images/team/test-thumb1.jpg" alt="" class="img-fluid">
+					</div>
+
+					<div class="client-info ">
+						<h4>Amazing service!</h4>
+						<span>John Partho</span>
+						<p>
+							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+						</p>
+					</div>
+				</div>
+
+				<div class="testimonial-block style-2  gray-bg">
+					<div class="testimonial-thumb">
+						<img src="images/team/test-thumb2.jpg" alt="" class="img-fluid">
+					</div>
+
+					<div class="client-info">
+						<h4>Expert doctors!</h4>
+						<span>Mullar Sarth</span>
+						<p>
+							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+						</p>
+					</div>
+					
+					<i class="icofont-quote-right"></i>
+				</div>
+
+				<div class="testimonial-block style-2  gray-bg">
+					<div class="testimonial-thumb">
+						<img src="images/team/test-thumb3.jpg" alt="" class="img-fluid">
+					</div>
+
+					<div class="client-info">
+						<h4>Good Support!</h4>
+						<span>Kolis Mullar</span>
+						<p>
+							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+						</p>
+					</div>
+					
+					<i class="icofont-quote-right"></i>
+				</div>
+
+				<div class="testimonial-block style-2  gray-bg">
+					<div class="testimonial-thumb">
+						<img src="images/team/test-thumb4.jpg" alt="" class="img-fluid">
+					</div>
+
+					<div class="client-info">
+						<h4>Nice Environment!</h4>
+						<span>Partho Sarothi</span>
+						<p class="mt-4">
+							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+						</p>
+					</div>
+					<i class="icofont-quote-right"></i>
+				</div>
+
+				<div class="testimonial-block style-2  gray-bg">
+					<div class="testimonial-thumb">
+						<img src="images/team/test-thumb1.jpg" alt="" class="img-fluid">
+					</div>
+
+					<div class="client-info">
+						<h4>Modern Service!</h4>
+						<span>Kolis Mullar</span>
+						<p>
+							They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.
+						</p>
+					</div>
+					<i class="icofont-quote-right"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+<!-- <section class="section clients">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7">
+				<div class="section-title text-center">
+					<h2>Partners who support us</h2>
+					<div class="divider mx-auto my-4"></div>
+					<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row clients-logo">
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/1.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/2.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/3.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/4.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/5.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/6.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/3.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/4.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/5.png" alt="" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="client-thumb">
+					<img src="images/about/6.png" alt="" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+  const testimonials = document.querySelectorAll('.testimonial-text');
+  const dots = document.querySelectorAll('.dot');
+  let current = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+      testimonial.style.display = i === index ? 'block' : 'none';
+      dots[i].classList.toggle('active', i === index);
+    });
+    current = index;
+  }
+
+  window.prevTestimonial = () => {
+    let newIndex = current - 1;
+    if (newIndex < 0) newIndex = testimonials.length - 1;
+    showTestimonial(newIndex);
+  };
+
+  window.nextTestimonial = () => {
+    let newIndex = current + 1;
+    if (newIndex >= testimonials.length) newIndex = 0;
+    showTestimonial(newIndex);
+  };
+
+  window.goToTestimonial = (index) => {
+    showTestimonial(index);
+  };
+
+  // Initialize the first testimonial
+  showTestimonial(0);
+});
+</script>
+
+{% endblock body %}

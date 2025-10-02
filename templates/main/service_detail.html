@@ -1,0 +1,122 @@
+{% extends "layouts/main_layout.html" %}
+{% load static %}
+
+{% block meta %}
+<meta name="description" content="{{ service.short_description|default:''|truncatewords:30 }}">
+<meta property="og:title" content="{{ service.title }} - Suryaa Neuro">
+<meta property="og:description" content="{{ service.short_description|default:''|truncatewords:30 }}">
+{% endblock %}
+
+{% block title %}{{ service.title }}{% endblock title %}
+
+{% block body %}
+<div style="display: flex; flex-direction: column; align-items: center; margin: 100px 0;">
+
+  <!-- Top back button near service title -->
+  <div style="width: 100%; max-width: 1000px; display: flex; align-items: center; margin-bottom: 20px;">
+    <a href="{% url 'suryaa_app:service' %}" style="margin-right: 20px; text-decoration: none; color: rgb(0, 80, 184); font-weight: bold;">&larr; Back</a>
+    <h1 style="flex-grow: 1; text-align: center; margin: 0; color: rgb(175, 0, 0);">{{ service.title }}</h1>
+  </div>
+
+  {% if service.image_or_url %}
+    <img src="{{ service.image_or_url }}" alt="{{ service.title }}" 
+         style="display: block; margin: 0 auto 32px auto; max-width: 600px; height: auto;">
+  {% endif %}
+
+  <div style="width: 100%; max-width: 1000px; margin-top: 30px;">
+    {% for topic_dict in topics_with_grouped_contents %}
+      <h2 style="color: rgb(0, 80, 184); text-align: center; margin: 32px 0 50px 0;">
+        {{ topic_dict.topic.title }}
+      </h2>
+      <div style="color: black;">
+        {% for group in topic_dict.grouped_contents %}
+          {% if group.type == 'subtopic' %}
+            <h3 style="text-align: left; color: rgba(190, 0, 0, 0.87); font-size: 26px; margin: 20px 0;">
+              {{ group.item.text|safe }}
+            </h3>
+          {% elif group.type == 'para' %}
+            <p style="text-align: left; font-weight: 700; font-size: 22px; margin: 20px 0 30px 0;">
+              {{ group.item.text|safe }}
+            </p>
+          {% elif group.type == 'point_group' %}
+            <ul style="display: block; margin: 0 0 20px 40px; font-size: 20px; max-width: fit-content; margin-bottom: 50px;">
+              {% for point in group.items %}
+                <li>{{ point.text|safe }}</li>
+              {% endfor %}
+            </ul>
+          {% elif group.type == 'image' %}
+            {% if group.item.image %}
+            <img src="{{ group.item.image.url }}" alt="{{ topic_dict.topic.title }}" style="display: block; margin: 8px auto; max-width: 600px; margin-bottom: 80px;">
+            {% elif group.item.image_or_url %}
+            <img src="{{ group.item.image_or_url }}" alt="{{ topic_dict.topic.title }}" style="display: block; margin: 8px auto; max-width: 600px;">
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+
+<!-- FAQ Section with accordion behavior and icons -->
+{% if faqs %}
+<div style="width: 100%; max-width: 1000px; margin-top: 50px; color: black;">
+  <h2 style="color: rgb(0, 80, 184); margin-bottom: 24px;">Frequently Asked Questions</h2>
+  <div id="faq-accordion">
+    {% for faq in faqs %}
+      <button class="faq-question" style="width: 100%; text-align: left; font-weight: 700; padding: 12px; border: none; background: #97d0ff; cursor: pointer; margin-top: 10px; position: relative;">
+        {{ faq.question|safe }}
+      </button>
+      <div class="faq-answer" style="padding: 10px 15px; background: #97d0ff9f; display: none;">
+        {{ faq.answer|safe }}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .faq-question::after {
+    content: '\02795'; /* Unicode plus sign */
+    font-size: 18px;
+    color: #ffffff;
+    float: right;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+  }
+  .faq-question.active::after {
+    content: '\2796'; /* Unicode minus sign */
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var acc = document.getElementsByClassName("faq-question");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        var currentlyActive = document.querySelector(".faq-question.active");
+        if (currentlyActive && currentlyActive !== this) {
+          currentlyActive.classList.remove("active");
+          currentlyActive.nextElementSibling.style.display = "none";
+        }
+
+        this.classList.toggle("active");
+        var answer = this.nextElementSibling;
+        if (answer.style.display === "block") {
+          answer.style.display = "none";
+        } else {
+          answer.style.display = "block";
+        }
+      });
+    }
+  });
+</script>
+{% endif %}
+
+  <!-- Bottom back button -->
+  <div style="width: 100%; max-width: 1000px; margin-top: 50px; text-align: center;">
+    <a href="{% url 'suryaa_app:service' %}" style="text-decoration: none; color: rgb(0, 80, 184); font-weight: bold; font-size: 18px;">
+      &larr; Back to Services
+    </a>
+  </div>
+
+</div>
+{% endblock body %}

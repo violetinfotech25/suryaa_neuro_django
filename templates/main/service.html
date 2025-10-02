@@ -1,0 +1,211 @@
+{% extends "layouts/main_layout.html" %}
+{% load static %}
+
+{% block title %}Service{% endblock title %}
+{% block body %}
+<section class="page-title bg-1">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block text-center">
+          <span class="text-white">Our services</span>
+          <h1 class="text-capitalize mb-5 text-lg">What We Do</h1>
+
+          <!-- <ul class="list-inline breadcumb-nav">
+            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+            <li class="list-inline-item"><span class="text-white">/</span></li>
+            <li class="list-inline-item"><a href="#" class="text-white-50">Our services</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section service-2">
+    <div class="container">
+        <div class="row">
+            {% for service in services %}
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <a href="{% url 'suryaa_app:service_detail' service.slug %}" style="text-decoration: none; color: inherit;">
+                    <div class="service-block mb-5">
+                        <img src="{{ service.image_or_url }}" alt="{{ service.title }}" class="img-fluid">
+                        <div class="content">
+                            <h4 class="mt-4 mb-2 title-color">{{ service.title }}</h4>
+                            <p class="mb-4">{{ service.short_description }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% empty %}
+            <p>No services available.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- <section class="section service-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5">
+					<img src="https://medicaldialogues.in/h-upload/2024/02/02/231399-stroke-50-1.webp" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Stroke Management</h4>
+						<p class="mb-4">Stroke is a medical emergency where blood flow to part of the brain is interrupted, causing brain cell damage.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5">
+					<img src="https://drrohitgupta.co.in/wp-content/uploads/2024/10/How-Exercises-Help-to-Treat-Vertigo-Dr-Rohit-Gupta.jpg" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2  title-color">Vertigo</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5">
+					<img src="{% static 'images/service/service-3.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Peripheral neuropathy</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-4.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Movement disorder</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-6.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Epilepsy Care & Management</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-8.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Parkinson's Disease</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-8.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Migraine Headache</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-8.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Motor Neurone Disease</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-8.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Neuro Ophthalmology</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-8.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Neuromuscular Disorder</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-8.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Neuro Oncology</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-8.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Multiple Sclerosis</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-8.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Neuro Infectious Disease</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="service-block mb-5 mb-lg-0">
+					<img src="{% static 'images/service/service-8.jpg' %}" alt="" class="img-fluid">
+					<div class="content">
+						<h4 class="mt-4 mb-2 title-color">Myasthenia Gravis</h4>
+						<p class="mb-4">Saepe nulla praesentium eaque omnis perferendis a doloremque.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+
+<section class="section cta-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7">
+				<div class="cta-content">
+					<div class="divider mb-4"></div>
+					<h2 class="mb-5 text-lg">We are pleased to offer you the <span class="title-color">chance to have the healthy</span></h2>
+					<a href="{% url 'suryaa_app:appoinment' %}" class="btn btn-main-2 btn-round-full">Get appoinment<i class="icofont-simple-right  ml-2"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock body %}

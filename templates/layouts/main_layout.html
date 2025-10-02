@@ -1,0 +1,336 @@
+{% load compress static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Orbitor,business,company,agency,modern,hospitel,medical,neuro,neurology,coimabatore,tamilnadu,india">
+    <meta name="author" content="violetinfotech.com">
+    {% block meta %}{% endblock %}
+    <title>{% block title %}{% endblock title %}- Suryaa Neuro </title>
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/icofont/icofont.min.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/slick-carousel/slick/slick-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/style.scss' %}">
+    <!-- <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_variables.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_typography.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_mixins.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_media-query.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_common.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_color.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_about.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_backgrounds.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_blog-sidebar.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_blog.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_contact.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_counter.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_cta.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_department.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_feature.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_footer.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_header.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_navigation.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_portfolio.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_review.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_service.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_single-post.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_slider.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/_team.scss' %}"> -->
+    
+
+
+    <script src="{% static 'plugins/jquery/jquery.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/js/popper.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'plugins/counterup/jquery.easing.js' %}"></script>
+    <script src="{% static 'plugins/slick-carousel/slick/slick.min.js' %}"></script>
+    <script src="{% static 'plugins/counterup/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'plugins/shuffle/shuffle.min.js' %}"></script>
+    <script src="{% static 'plugins/counterup/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
+
+    {% endcompress %}
+
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f4f4f4;
+    }
+
+    .scrolling-wrapper {
+      background: linear-gradient(90deg, #e3ffe7, #d9e7ff);
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .scrolling-content {
+      display: inline-block;
+      animation: scroll-left 30s linear infinite;
+    }
+
+    .scroll-item {
+      display: inline-block;
+      min-width: 150px;
+      margin: 0 10px;
+      padding: 10px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+    }
+.scrolling-content .scroll-item:nth-child(10n+1) { background: #e74c3c; color: white; }  /* Red */
+.scrolling-content .scroll-item:nth-child(10n+2) { background: #3498db; color: white; }  /* Blue */
+.scrolling-content .scroll-item:nth-child(10n+3) { background: #2ecc71; color: white; }  /* Green */
+.scrolling-content .scroll-item:nth-child(10n+4) { background: #f1c40f; color: black; }  /* Yellow */
+.scrolling-content .scroll-item:nth-child(10n+5) { background: #9b59b6; color: white; }  /* Purple */
+.scrolling-content .scroll-item:nth-child(10n+6) { background: #e67e22; color: white; }  /* Orange */
+.scrolling-content .scroll-item:nth-child(10n+7) { background: #1abc9c; color: white; }  /* Teal */
+.scrolling-content .scroll-item:nth-child(10n+8) { background: #34495e; color: white; }  /* Dark Blue */
+.scrolling-content .scroll-item:nth-child(10n+9) { background: #d35400; color: white; }  /* Dark Orange */
+.scrolling-content .scroll-item:nth-child(10n+10) { background: #7f8c8d; color: white; } /* Gray */
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+
+    .services {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .services h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .services .divider {
+      color: #ff4500;
+      font-size: 20px;
+      margin-bottom: 40px;
+      display: inline-block;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .service-item {
+      text-align: center;
+    }
+
+    .service-item img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .service-item p {
+      font-size: 15px;
+      font-weight: bold;
+      color: #222;
+      margin: 0;
+    }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f6f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .testimonial-section {
+      background: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-section h2 {
+      display: inline-block;
+      background: #2c57a0;
+      color: #fff;
+      padding: 8px 20px;
+      font-size: 26px;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    .divider {
+      width: 100px;
+      height: 20px;
+      background: #2c57a0;
+      margin: 10px auto 30px;
+    }
+
+    .testimonial-container {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .testimonial-text {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 0 20px;
+    }
+
+    .testimonial-text strong {
+      font-size: 18px;
+      color: #000;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-text p {
+      color: #444;
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Arrows */
+    .arrow {
+      font-size: 28px;
+      color: #222;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      border-radius: 50%;
+      padding: 5px 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      user-select: none;
+    }
+    .arrow.left { left: 20px; }
+    .arrow.right { right: 20px; }
+
+    /* Dots */
+    .dots {
+      margin-top: 25px;
+    }
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: #000;
+    }
+  </style>
+  <script>
+    let index = 0;
+    const container = document.getElementById('testimonialContainer');
+    const dots = document.querySelectorAll('.dot');
+    const total = container.children.length;
+
+    function showTestimonial(i) {
+      container.style.transform = `translateX(${-i * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[i].classList.add('active');
+      index = i;
+    }
+
+    function nextTestimonial() {
+      index = (index + 1) % total;
+      showTestimonial(index);
+    }
+
+    function prevTestimonial() {
+      index = (index - 1 + total) % total;
+      showTestimonial(index);
+    }
+
+    function goToTestimonial(i) {
+      showTestimonial(i);
+    }
+  </script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+  const animationDuration = 2000; // total animation time in ms
+  let hasAnimated = false; // flag to ensure animation runs once
+
+  function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const increment = target / (animationDuration / 30);
+
+    function updateCount() {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.floor(count).toLocaleString();
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
+    }
+    updateCount();
+  }
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimated) {
+        counters.forEach(counter => animateCounter(counter));
+        hasAnimated = true;
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.5 }); // triggers when 50% of element visible
+
+  const counterSection = document.getElementById('counter-section');
+  if (counterSection) {
+    observer.observe(counterSection);
+  }
+});
+</script>
+</head>
+<body>
+    {% include "inc/navbar.html" %}
+
+    {% block body %}
+    {% endblock body %}
+
+    {% include "inc/Footer.html" %}
+</body>
+</html>
